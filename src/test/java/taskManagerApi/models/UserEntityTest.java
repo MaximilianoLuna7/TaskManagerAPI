@@ -39,23 +39,17 @@ class UserEntityTest {
 
     @Test
     void testSetAndGetTasksList() {
-        // Crear una instancia de UserEntity
         UserEntity user = new UserEntity();
 
-        // Crear una lista de tareas (asumiendo que tasksList es una List<TaskEntity>)
         List<TaskEntity> tasksList = new ArrayList<>();
         TaskEntity task1 = TaskEntity.builder().id(1L).title("Tarea 1").build();
         TaskEntity task2 = TaskEntity.builder().id(2L).title("Tarea 2").build();
         tasksList.add(task1);
         tasksList.add(task2);
 
-        // Establecer la lista de tareas en el usuario
         user.setTasksList(tasksList);
 
-        // Obtener la lista de tareas del usuario
         List<TaskEntity> retrievedTasksList = user.getTasksList();
-
-        // Verificar que la lista de tareas devuelta es igual a la lista original
         assertEquals(tasksList, retrievedTasksList);
     }
 
