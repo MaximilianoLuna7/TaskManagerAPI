@@ -1,8 +1,5 @@
 package taskManagerApi.models;
 
-import jakarta.validation.ConstraintViolationException;
-import org.h2.engine.User;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
