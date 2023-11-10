@@ -36,7 +36,7 @@ class TaskEntityValidationTest {
     @Test
     void testDateFormatForDueDate() {
         TaskEntity task = TaskEntity.builder()
-                .title("Tarea de prueba")
+                .title("Test task")
                 .dueDate(LocalDate.of(2023, 11, 30))
                 .build();
 
@@ -48,7 +48,7 @@ class TaskEntityValidationTest {
     @Test
     void testDateFormatForCreationDate() {
         TaskEntity task = TaskEntity.builder()
-                .title("Tarea de prueba")
+                .title("Test task")
                 .creationDate(LocalDateTime.now())
                 .build();
 
@@ -60,7 +60,7 @@ class TaskEntityValidationTest {
     @Test
     void testDateFormatForUpdateDate() {
         TaskEntity task = TaskEntity.builder()
-                .title("Tarea de prueba")
+                .title("Test task")
                 .updateDate(LocalDateTime.now())
                 .build();
 
@@ -72,12 +72,11 @@ class TaskEntityValidationTest {
     @Test
     void testDateFormatForCompletionDate() {
         TaskEntity task = TaskEntity.builder()
-                .title("Tarea de prueba")
+                .title("Test task")
                 .completionDate(LocalDate.now().atStartOfDay())
                 .build();
 
         var violations = validator.validate(task);
         assertTrue(violations.isEmpty());
     }
-
 }
