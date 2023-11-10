@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// This class contains tests to validate the constraints of TaskEntity class.
 class TaskEntityValidationTest {
 
     private Validator validator;
